@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/D:/Ecole/Web/album-projet-web/web/WEB-INF/jsp/profil.jsp</file>
+            <file>file:/D:/Ecole/Web/album-projet-web/web/WEB-INF/jsp/pageErreur.jsp</file>
+            <file>file:/D:/Ecole/Web/album-projet-web/web/WEB-INF/applicationContext.xml</file>
+            <file>file:/D:/Ecole/Web/album-projet-web/src/java/com/mhaddad/pfw/jdbc/Connexion.java</file>
+            <file>file:/D:/Ecole/Web/album-projet-web/src/java/com/mhaddad/pfw/services/UtilisateurServices.java</file>
+            <file>file:/D:/Ecole/Web/album-projet-web/src/java/com/mhaddad/pfw/services/PublicationServices.java</file>
+            <file>file:/D:/Ecole/Web/album-projet-web/web/WEB-INF/jsp/accueil.jsp</file>
+            <file>file:/D:/Ecole/Web/album-projet-web/src/java/com/mhaddad/pfw/daos/PublicationDao.java</file>
+            <file>file:/D:/Ecole/Web/album-projet-web/web/WEB-INF/main-servlet.xml</file>
+            <file>file:/D:/Ecole/Web/album-projet-web/src/java/com/mhaddad/pfw/daos/ProfilDao.java</file>
+            <file>file:/D:/Ecole/Web/album-projet-web/web/WEB-INF/jsp/header.jsp</file>
+            <file>file:/D:/Ecole/Web/album-projet-web/src/java/com/mhaddad/pfw/entites/Utilisateur.java</file>
+            <file>file:/D:/Ecole/Web/album-projet-web/src/java/com/mhaddad/pfw/controleurs/MainController.java</file>
+            <file>file:/D:/Ecole/Web/album-projet-web/web/WEB-INF/web.xml</file>
+            <file>file:/D:/Ecole/Web/album-projet-web/web/WEB-INF/jsp/modificationProfil.jsp</file>
+            <file>file:/D:/Ecole/Web/album-projet-web/web/WEB-INF/jsp/inscription.jsp</file>
+            <file>file:/D:/Ecole/Web/album-projet-web/src/java/com/mhaddad/pfw/daos/SqlDAO.java</file>
+            <file>file:/D:/Ecole/Web/album-projet-web/src/java/com/mhaddad/pfw/services/ProfilServices.java</file>
+            <file>file:/D:/Ecole/Web/album-projet-web/src/java/com/mhaddad/pfw/entites/Publication.java</file>
+            <file>file:/D:/Ecole/Web/album-projet-web/src/java/com/mhaddad/pfw/entites/Profil.java</file>
+            <file>file:/D:/Ecole/Web/album-projet-web/src/java/com/mhaddad/pfw/daos/UtilisateurDao.java</file>
+            <file>file:/D:/Ecole/Web/album-projet-web/web/WEB-INF/jsp/connexion.jsp</file>
+        </group>
+    </open-files>
+</project-private>

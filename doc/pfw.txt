@@ -1,0 +1,57 @@
+CREATE DATABASE pfw;
+USE pfw;
+CREATE TABLE profil(
+    	id INT(11) PRIMARY KEY AUTO_INCREMENT,
+	nom VARCHAR(255),
+	prenom VARCHAR(255),
+	photo_url varchar(255) NULL
+);
+
+CREATE TABLE utilisateur(
+	pseudonyme VARCHAR(255) NOT NULL PRIMARY KEY,
+	motDePasse VARCHAR(255) NOT NULL,
+	profil_id INT(11) NOT NULL,
+	CONSTRAINT FK_id_profil FOREIGN KEY(profil_id) REFERENCES profil(id),
+	courriel VARCHAR(255) NOT NULL,
+	numeroTel CHAR(11),
+	dateCreation DATE NOT NULL,
+	role ENUM('ADMINISTRATEUR', 'USAGER') NOT NULL DEFAULT 'USAGER'
+);
+
+CREATE TABLE publication(
+	id INT(11) PRIMARY KEY AUTO_INCREMENT,
+	utilisateur_pseudonyme VARCHAR(255) NOT NULL,
+	FOREIGN KEY(utilisateur_pseudonyme) REFERENCES utilisateur(pseudonyme),	
+	titre VARCHAR(255) NOT NULL,
+	`date` DATE NOT NULL,
+	`like` INT NOT NULL,
+	description TEXT(5000) NOT NULL,
+	format ENUM('PHOTO', 'VIDEO') NOT NULL
+);
+
+CREATE TABLE amis(
+	id INT(11) PRIMARY KEY AUTO_INCREMENT, 
+	utilisateur_1 VARCHAR(255),
+	FOREIGN KEY(utilisateur_1) REFERENCES utilisateur(pseudonyme),
+	utilisateur_2 VARCHAR(255),
+	FOREIGN KEY(utilisateur_2) REFERENCES utilisateur(pseudonyme)
+);
+
+CREATE TABLE commentaire(
+	id INT(11) PRIMARY KEY AUTO_INCREMENT, 
+	utilisateur_pseudonyme VARCHAR(255),
+	FOREIGN KEY(utilisateur_pseudonyme) REFERENCES utilisateur(pseudonyme),	
+	publication_id int,		
+	FOREIGN KEY(publication_id) REFERENCES publication(id),
+	contenu TEXT(5000) NOT NULL,
+	`date` DATE NOT NULL
+);
+
+INSERT INTO `profil`(`nom`, `prenom`, `photo_url`) VALUES ("RogerFrais","Yuhan","chien.jpg");
+INSERT INTO `profil`(`nom`, `prenom`, `photo_url`) VALUES ("Poipoi","Charlo","chat.png");
+INSERT INTO `profil`(`nom`, `prenom`, `photo_url`) VALUES ("Massif","Massy","ballon.png");
+
+
+INSERT INTO `utilisateur`(`pseudonyme`, `motDePasse`, `profil_id`, `courriel`, `numeroTel`, `dateCreation`) VALUES ("Yuhan","12345677",1,"Yuhan@roger.com",4505891432,"2020-11-11");
+INSERT INTO `utilisateur`(`pseudonyme`, `motDePasse`, `profil_id`, `courriel`, `numeroTel`, `dateCreation`) VALUES ("Charlo123","99999999",2,"Charlo@roger.com",4505895050,"2020-11-11");
+INSERT INTO `utilisateur`(`pseudonyme`, `motDePasse`, `profil_id`, `courriel`, `numeroTel`, `dateCreation`) VALUES ("Massy321","84367433",3,"Massif@roger.com",4505894343,"2020-11-11");
